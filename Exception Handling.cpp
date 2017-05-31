@@ -11,7 +11,7 @@ double division(int a, int b) {
 int main () {
    int x = 50;
    int y = 0;
-   double z = 0;
+   double z = 01111111;
  
    try {
       z = division(x, y);
