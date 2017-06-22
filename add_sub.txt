@@ -1,0 +1,41 @@
+void add_sub(QMainWindow *MainWindow)
+    {
+        hLayouts.push_back(horizontalLayout1);
+        hLayouts[count2]=new QHBoxLayout();
+
+        hLayouts[count2]->setSpacing(6);
+        hLayouts[count2]->setObjectName(QStringLiteral("horizontalLayout"));
+        lineEdits.push_back(lineEdit1);
+        lineEdits[count2]= new QLineEdit(scrollAreaWidgetContents);
+        lineEdits[count2]->setObjectName(QStringLiteral("lineEdit"));
+
+        hLayouts[count2]->addWidget(lineEdits[count2]);
+
+       // comboBox = new QComboBox();
+        credits.push_back(comboBox1);
+        credits[count2]=new QComboBox;
+        credits[count2]->setParent(scrollAreaWidgetContents);
+        credits[count2]->setObjectName(QStringLiteral("comboBox"));
+        //delete comboBox;
+
+        hLayouts[count2]->addWidget(credits[count2]);
+        grades.push_back(comboBox1);
+        grades[count2]=new QComboBox;
+        grades[count2]->setParent(scrollAreaWidgetContents);
+        grades[count2]->setObjectName(QStringLiteral("comboBox_2"));
+
+        hLayouts[count2]->addWidget(grades[count2]);
+
+        gpa.push_back(doubleSpinBox1);
+        gpa[count2]= new QDoubleSpinBox(scrollAreaWidgetContents);
+        gpa[count2]->setObjectName(QStringLiteral("doubleSpinBox"));
+
+        hLayouts[count2]->addWidget(gpa[count2]);
+
+
+        verticalLayout->addLayout(hLayouts[count2]);
+        scrollArea->setWidget(scrollAreaWidgetContents);
+        MainWindow->setCentralWidget(centralWidget);
+        ++count2;
+
+    }

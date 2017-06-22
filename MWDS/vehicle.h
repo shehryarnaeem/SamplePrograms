@@ -1,0 +1,31 @@
+#ifndef VEHICLE_H
+#define VEHICLE_H
+
+#include "vehicleexpenserecord.h"
+
+#include <QString>
+#include <vector>
+
+class Vehicle
+{
+private:
+    int vehicleID;
+    QString regNo;
+    int areaCode;
+    static int count;
+    std::vector<VehicleExpenseRecord> records;
+
+public:
+    Vehicle();
+    Vehicle(QString,int, std::vector<VehicleExpenseRecord>);
+    Vehicle(const Vehicle&);
+    void set_regNo(QString);
+    void set_areaCode(int);
+    void set_records(std::vector<VehicleExpenseRecord>);
+    int get_vehicleID()const;
+    QString get_regNo()const;
+    int get_areaCode()const;
+    std::vector<VehicleExpenseRecord> get_records()const;
+    static int get_count();
+};
+#endif // VEHICLE_H
