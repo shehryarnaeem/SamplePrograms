@@ -1,0 +1,10 @@
+LIMITATIONS IN ARRAYS:
+Contiguous memory allocation.
+Size has to be specified in the beginning.
+
+
+
+ARRAYS VS LINKED LISTS:
+For accessing, array uses constant time while a linked list uses linear time.
+If the data is big then linked will consume lot less memory than array other than it depends on the strategy we are working on.
+Insertion of an element in an array has a greater cost than inserting in a linked list.

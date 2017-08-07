@@ -1,0 +1,8 @@
+<RCC>
+    <qresource prefix="/img">
+        <file>15-512.png</file>
+        <file>add_list1600.png</file>
+        <file>close_4-512.png</file>
+        <file>player-08-128.png</file>
+    </qresource>
+</RCC>
