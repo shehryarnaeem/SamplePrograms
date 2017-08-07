@@ -11,7 +11,7 @@ int main(){
     }
     for(int i=0;i<unsorted.size();i++)
     {
-        for(int j=i+1;j<unsorted.size();j++)
+        for(int j=i+1;j<unsorted.size();j++)n
         {
             long int a=unsorted[i].length();
             long int b=unsorted[j].length();
