@@ -15,57 +15,61 @@
 #include <iostream>
 #include <algorithm>
 using namespace std;
-void partition(vector <int>  ar,int start,int enda) {
+int partition( int ar[],int start,int end) {
    // Enter code for partitioning and printing here.
-   int left=start+1,right=enda,pivot=start;
-   if(left!=right)
-   {
-
+   int left=start+1,right=end,pivot=start;
    while(right>left)
    {
-       while(ar[left]<ar[pivot]&&left>=start)
+       while(ar[left]<ar[pivot]&&left<=end)
        {
            ++left;
        }
 
-       while(ar[right]>ar[pivot])
+       while(ar[right]>ar[pivot]&&right>=0)
        {
         --right;
        }
 
        if(left<=right)
        swap(ar[left],ar[right]);
-
-
    }
    swap(ar[pivot],ar[right]);
-   //start=0;
-   //enda=right;
-   //cout<<left<<" "<<right<<endl;
-   partition(ar,start,right);
-   //start=left;
-   //enda=ar.size()-1;
-    partition(ar,left,enda);
-   }
+   pivot=right;
+
+    return pivot;
 }
-int main(void) {
-   vector <int>  _ar;
-   int _ar_size;
-   cin >> _ar_size;
-
-     for(int _ar_i=0; _ar_i<_ar_size; _ar_i++) {
-        int _ar_tmp;
-        cin >> _ar_tmp;
-        _ar.push_back(_ar_tmp);
-    }
-    int start=0,enda=_ar.size()-1;
-
-   partition(_ar,start,enda);
-for(int i=0;i<_ar.size();i++)
+void quickSort(int ar[],int start,int end)
+{
+   if(start>=end)
+   {
+       return  ;
+   }
+else
+{
+        int piv=partition(ar,start,end);
+       quickSort(ar,start,piv-1);
+       quickSort(ar,piv+1,end);
+}
+for(int i=0;i<=end;i++)
    {
 
-       cout<<_ar[i]<<" ";
+       cout<<ar[i]<<" ";
    }
+   cout<<endl;
+}
+int main(void) {
+
+   int _ar_size;
+
+   cin >> _ar_size;
+   int _ar[_ar_size];
+
+     for(int _ar_i=0; _ar_i<_ar_size; _ar_i++) {
+        cin>>_ar[_ar_i];
+    }
+int start=0,end=_ar_size-1;
+   quickSort(_ar,start,end);
+
 
    return 0;
 }

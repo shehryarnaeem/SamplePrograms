@@ -17,18 +17,20 @@ int main(){
     {
         int len=arr[i];
         int count=0;
+        if(len>0)
+        {
+
         for(int j=0;j<arr.size();j++)
         {
-          arr[j]-=len;
-          ++count;
-          if(arr[j]<=0)
-        {
-            arr.erase(arr.begin()+j);
+            if(arr[j]>0)
+            {
+                arr[j]=arr[j]-len;
+                ++count;
+            }
         }
         }
-
+        if(count!=0)
         cout<<count<<endl;
-
     }
 
     return 0;
