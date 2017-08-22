@@ -18,14 +18,14 @@ using namespace std;
 int partition( int ar[],int start,int end) {
    // Enter code for partitioning and printing here.
    int left=start+1,right=end,pivot=start;
-   while(right>left)
+   while(right>=left)
    {
        while(ar[left]<ar[pivot]&&left<=end)
        {
            ++left;
        }
 
-       while(ar[right]>ar[pivot]&&right>=0)
+       while(ar[right]>ar[pivot]&&right>0)
        {
         --right;
        }
@@ -35,6 +35,8 @@ int partition( int ar[],int start,int end) {
    }
    swap(ar[pivot],ar[right]);
    pivot=right;
+   //cout<<pivot<<endl;
+
 
     return pivot;
 }
@@ -48,14 +50,18 @@ else
 {
         int piv=partition(ar,start,end);
        quickSort(ar,start,piv-1);
-       quickSort(ar,piv+1,end);
-}
-for(int i=0;i<=end;i++)
+       for(int i=start;i<=piv;i++)
    {
-
        cout<<ar[i]<<" ";
    }
    cout<<endl;
+       quickSort(ar,piv+1,end);
+       for(int i=piv;i<=end;i++)
+   {
+       cout<<ar[i]<<" ";
+   }
+   cout<<endl;
+}
 }
 int main(void) {
 
@@ -69,7 +75,11 @@ int main(void) {
     }
 int start=0,end=_ar_size-1;
    quickSort(_ar,start,end);
+   for(int i=0;i<_ar_size;i++)
+   {
 
+       cout<<_ar[i]<<" ";
+   }
 
    return 0;
 }
