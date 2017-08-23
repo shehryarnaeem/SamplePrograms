@@ -16,9 +16,7 @@ public class PowerAlgorithm {
     /**
      * @param args the command line arguments
      */
-    static int fast_exp(int x,int n)
-    {
-        int y=1;
+    static int fast_exp(int x,int n,int y){
         if(n<=0)
         {
             return y;
@@ -30,7 +28,7 @@ public class PowerAlgorithm {
             }
             x*=x;
             n=n/2;
-            return y*fast_exp(y,n);
+            return fast_exp(x,n,y);
         }
     }
     public static void main(String[] args) {
@@ -38,7 +36,8 @@ public class PowerAlgorithm {
         Scanner intInp=new Scanner(System.in);
         int x=intInp.nextInt();
         int n=intInp.nextInt();
-        System.out.print(fast_exp(x,n));
+        int y=1;
+        System.out.print(fast_exp(x,n,y));
     }
     
 }
