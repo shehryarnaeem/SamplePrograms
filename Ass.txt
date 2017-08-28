@@ -1,0 +1,203 @@
+						"ASSIGNMENT 01"
+ANSWER 1:
+LOOP 1:
+	Initializing Loop Index=1.
+	Comparisons=n+1.
+	Increment Operator=2n.
+	Loop=2n.
+	Total=1+n+1+2n+2n.
+	Primitive Operations=5n+2.
+	Time Complexity=O(n);
+LOOP 2:
+	Initializing Loop Index=1.
+	Comparisons=(n^2)+1.
+	Increment Operator=2(n^2).
+	Loop=2(n^2).
+	Total=1+(n^2)+1+2(n^2)+2(n^2).
+	Primitive Operations=5(n^2)+2.
+	Time Complexity=O(n^2);
+LOOP 3:
+	Initializing Loop Index=1.
+	Comparisons=(nm)+2.
+	Increment Operator=2((nm)+1).
+	Loop=2((nm)+1).
+	Total=1+(nm)+2+2((nm)+1)+2((nm)+1).
+	Primitive Operations=5(nm)+7.
+	Time Complexity=O(nm);
+LOOP 4:
+	Initializing Loop Index=1.
+	Comparisons=n+1.
+	Increment Operator=2n.
+	Loop=2n.
+	Total=1+n+1+2n+2n.
+	Primitive Operations=5n+2.
+	Time Complexity=O(n);
+LOOP 5:
+	Initializing Loop Index=1.
+	Comparisons=min(n,m)+2.
+	Increment Operator=4(min(n,m)+1).
+	Loop=2(min(n,m)+1).
+	Total=1+min(n,m)+2+4(min(n,m)+1)+2(min(n,m)+1).
+	Primitive Operations=7min(n,m)+9.
+	Time Complexity=O(min(n,m)).
+LOOP 6:
+	Initializing Loop Index=1.
+	Comparisons=max(n,m)+2.
+	Increment Operator=4(max(n,m)+1).
+	Loop=2(max(n,m)+1).
+	Total=1+max(n,m)+2+4(max(n,m)+1)+2(max(n,m)+1).
+	Primitive Operations=7max(n,m)+9.
+	Time Complexity=O(max(n,m));
+
+ANSWER 2:
+LOOP 1:
+Outer Loop:
+	Index Initializing=1.
+	Comparisons=n+1.
+	Increment Operator=2n.
+Inner Loop:
+	Index Initializing=1.
+	Comparisons=m+1.
+	Increment Operator=2m.
+	Loop=3m.
+Total=1+n+1+2n+n(1+m+1+2m+3m).
+
+	Primitive Operations=6nm+5n+2.
+	Time Complexity=O(nm).
+LOOP 2:
+Outer Loop:
+	Index Initializing=1.
+	Comparisons=n+1.
+	Increment Operator=2n.
+Inner Loop:
+	Index Initializing=1.
+	Comparisons=(n^2)+1.
+	Increment Operator=2(n^2).
+	Loop=3(n^2).
+Total=1+n+1+2n+n(1+(n^2)+1+2(n^2)+3(n^2)).
+
+	Primitive Operations=6(n^3)+5n+2.
+	Time Complexity=O(n^3).
+LOOP 3:
+Outer Loop:
+	Index Initializing=1.
+	Comparisons=n1+1.
+	Increment Operator=2n1.
+Middle Loop:
+	Index Initializing=1.
+	Comparisons=n2+1.
+	Increment Operator=2(n2).
+Inner Loop:
+	Index Initializing=1.
+	Comparisons=(n3)+1.
+	Increment Operator=2(n3).
+	Loop=3(n3).
+Total=1+n1+1+2n1+n1(1+n2+1+2n2+n2(1+n3+1+2n3+3n3)).
+
+	Primitive Operations=6(n1n2n3)+5(n1n2)+5n1+2.
+	Time Complexity=O(n1n2n3).
+	
+ANSWER 3:
+LOOP 1:
+	Index Initializing=1.
+	Comparisons=(log(base2) n)+2.
+	Increment Operator=2((log(base2) n)+1).
+	Loop=2((log(base2) n)+1).
+	Primitive Operations=5(log(base2) n)+7.
+	Time Complexity=O(log(base2) n).
+LOOP 2:
+	Index Initializing=1.
+	Comparisons=(log(base2) n)+2.
+	Increment Operator=2((log(base2) n)+1).
+	Loop=2((log(base2) n)+1).
+	Primitive Operations=5(log(base2) n)+7.
+	Time Complexity=O(log(base2) n).
+	
+ANSWER 4:
+LOOP 1:
+	Index Initializing=1.
+	Comparisons=(log(base2) n)+2.
+	Increment Operator=2((log(base2) n)+1).
+	Loop=2((log(base2) n)+1).
+	Primitive Operations=5(log(base2) n)+7.
+	Time Complexity=O(log(base2) n).
+LOOP 2:
+	Index Initializing=1.
+	Comparisons=(log(base2) (n^2))+2.
+	Increment Operator=2((log(base2) (n^2))+1).
+	Loop=2((log(base2) (n^2))+1).
+	Primitive Operations=5(log(base2) (n^2))+7.
+	Time Complexity=O(log(base2) (n^2)).
+
+ANSWER 5:
+LOOP 1:
+Outer Loop:
+	Index Initializing=1.
+	Comparisons=(n^3)+1.
+	Increment Operator=2(n^3).
+Inner Loop:
+	Index Initializing=1.
+	Comparisons=n^3.
+	Increment Operator=2((n^3)-1).
+	Loop=3((n^3)-1).
+Total=1+(n^3)+1+2(n^3)+(n^3)(1+(n^3)+2((n^3)-1)+3((n^3)-1)).
+
+	Primitive Operations=6(n^6)-(n^3)+2.
+	Time Complexity=O(n^6).
+
+LOOP 2:
+Outer Loop:
+	Index Initializing=1.
+	Comparisons=n+1.
+	Increment Operator=2n.
+Inner Loop:
+	Index Initializing=1.
+	Comparisons=n^3.
+	Increment Operator=2((n^3)-1).
+	Loop=3((n^3)-1).
+Total=1+n+1+2n+n(1+(n^3)+2((n^3)-1)+3((n^3)-1)).
+
+	Primitive Operations=6(n^4)-n+2.
+	Time Complexity=O(n^4).
+LOOP 3:
+Outer Loop:
+	Index Initializing=1.
+	Comparisons=(n^2)+1.
+	Increment Operator=2(n^2).
+Inner Loop:
+	Index Initializing=1.
+	Comparisons=n^2.
+	Increment Operator=2((n^2)-1).
+	Loop=3((n^2)-1).
+Total=1+(n^2)+1+2(n^2)+(n^2)(1+(n^2)+2((n^2)-1)+3((n^2)-1)).
+
+	Primitive Operations=6(n^4)-(n^2)+2.
+	Time Complexity=O(n^4).
+LOOP 4:
+Outer Loop:
+	Index Initializing=1.
+	Comparisons=(nm)+1.
+	Increment Operator=2(nm).
+Inner Loop:
+	Index Initializing=1.
+	Comparisons=nm.
+	Increment Operator=2((nm)-1).
+	Loop=3((nm)-1).
+Total=1+(nm)+1+2(nm)+(nm)(1+(nm)+2((nm)-1)+3((nm)-1)).
+
+	Primitive Operations=6((nm)^2)-(nm)+2.
+	Time Complexity=O((nm)^2).
+LOOP 5:
+Outer Loop:
+	Index Initializing=1.
+	Comparisons=n+1.
+	Increment Operator=2n.
+Inner Loop:
+	Index Initializing=1.
+	Comparisons=nm.
+	Increment Operator=2nm.
+	Loop=3nm.
+Total=1+n+1+2n+n(1+(nm)+2(nm)+3(nm)).
+
+	Primitive Operations=6((n^2)m)+4n+2.
+	Time Complexity=O((n^2)m).
