@@ -1,0 +1,132 @@
+Q1
+TITLE My First Program(Test.asm)
+INCLUDE Irvine32.inc
+.data 
+var DB 10
+.code
+main PROC
+
+mov AL,var
+ADD AL,40
+call DumpRegs
+exit
+
+main ENDP
+END main
+Q2
+TITLE My First Program(Test.asm)
+INCLUDE Irvine32.inc
+.data 
+var DB ?
+vall DB -10
+.code
+main PROC
+
+mov AL,vall
+mov var,AL
+call DumpRegs
+exit
+
+main ENDP
+END main
+Q3
+TITLE My First Program(Test.asm)
+INCLUDE Irvine32.inc
+.data 
+var WORD ?
+
+.code
+main PROC
+
+mov bx,12
+mov var,bx
+mov ax,var
+call DumpRegs
+exit
+
+main ENDP
+END main
+Q4
+TITLE My First Program(Test.asm)
+INCLUDE Irvine32.inc
+.data 
+var QWORD ?
+
+.code
+main PROC
+
+call DumpRegs
+exit
+
+main ENDP
+END main
+q5
+TITLE My First Program(Test.asm)
+INCLUDE Irvine32.inc
+.data 
+val3 DWORD -2147483648
+
+.code
+main PROC
+mov eax,val3
+call DumpRegs
+exit
+
+main ENDP
+END main
+q6
+TITLE My First Program(Test.asm)
+INCLUDE Irvine32.inc
+.data 
+wArray WORD 12,3,9
+
+.code
+main PROC
+
+call DumpRegs
+exit
+
+main ENDP
+END main
+q7
+TITLE My First Program(Test.asm)
+INCLUDE Irvine32.inc
+.data 
+string BYTE 'Black',0
+
+.code
+main PROC
+
+call DumpRegs
+exit
+
+main ENDP
+END main
+q8
+TITLE My First Program(Test.asm)
+INCLUDE Irvine32.inc
+.data 
+A WORD 12
+B WORD 2
+G WORD 13
+D WORD 8
+E WORD 14
+F WORD ?
+.code
+main PROC
+mov ax,A
+mov bx,B
+mul bx
+mov F,ax
+xor ax,ax
+xor bx,bx
+mov ax,G
+mov bx,D
+mul bx
+add ax,F
+sub ax,E
+call DumpRegs
+exit
+
+main ENDP
+END main
