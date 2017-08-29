@@ -24,7 +24,7 @@ public class Testing {
        int n;
        System.out.print("Enter the number of inputs: ");
        n=intInp.nextInt();
-       System.out.println((5*n)+2);
+       System.out.println((6*n)+2);
     }
     
 }
